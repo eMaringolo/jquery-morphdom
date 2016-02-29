@@ -29,12 +29,14 @@
         <script src="jquery.morphdom.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript">
             jQuery(document).ready(function ($) {
+                // replace #div with #newid
                 $('#div').morphdom("<div id=\"newid\">New Text</div>");
+                // replace the first li with the last one
                 $('ul').find('li').first().morphdom($('ul').find('li').last());
+                // replaces #fetched with the contents of partial.html
                 $.get('partial.html', function (data, textStatus, jqXHR) {
                     $('#fetched').find('.item').morphdom(data);
-                }
-                );
+                });
             });
         </script>
     </body>
