@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "A thin jQuery wrapped around patrick-steele-idem/morphdom",
   "main": "index.js",
+  "repository": "https://github.com/james2doyle/jquery-morphdom",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify index.js -o jquery.morphdom.js"
+    "build": "browserify index.js -o jquery.morphdom.js && uglifyjs jquery.morphdom.js -o jquery.morphdom.min.js -c"
   },
   "author": "James Doyle <james2doyle@gmail.com>",
   "license": "MIT",
