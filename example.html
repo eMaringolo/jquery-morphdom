@@ -30,9 +30,36 @@
         <script type="text/javascript">
             jQuery(document).ready(function ($) {
                 // replace #div with #newid
-                $('#div').morphdom("<div id=\"newid\">New Text</div>");
+                $('#div').morphdom("<div id=\"newid\">New Text</div>", function(newel) {
+                    // newel is the jQuery object for what you just inserted (#newid)
+                    console.log(newel);
+                });
                 // replace the first li with the last one
-                $('ul').find('li').first().morphdom($('ul').find('li').last());
+                // show an example of the callbacks
+                $('ul').find('li').first().morphdom($('ul').find('li').last(), {
+                    onBeforeNodeAdded: function(node) {
+                        console.log('onBeforeNodeAdded', arguments);
+                    },
+                    onNodeAdded: function(node) {
+                        console.log('onNodeAdded', arguments);
+                    },
+                    onBeforeElUpdated: function(fromEl, toEl) {
+                        console.log('onBeforeElUpdated', arguments);
+                    },
+                    onElUpdated: function(el) {
+                        console.log('onElUpdated', arguments);
+                    },
+                    onBeforeNodeDiscarded: function(node) {
+                        console.log('onBeforeNodeDiscarded', arguments);
+                    },
+                    onNodeDiscarded: function(node) {
+                        console.log('onNodeDiscarded', arguments);
+                    },
+                    onBeforeElChildrenUpdated: function(fromEl, toEl) {
+                        console.log('onBeforeElChildrenUpdated', arguments);
+                    },
+                    childrenOnly: false
+                });
                 // replaces #fetched with the contents of partial.html
                 $.get('partial.html', function (data, textStatus, jqXHR) {
                     $('#fetched').find('.item').morphdom(data);

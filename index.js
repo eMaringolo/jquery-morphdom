@@ -12,14 +12,10 @@
 
     $.fn.morphdom = function(node, options) {
 
+        if (!this.length) { return this; }
+
         // default options
         $.fn.morphdom.defaults = {};
-
-        if (typeof(options) === 'function') {
-            callback = options;
-        }
-
-        if (!this.length) { return this; }
 
         var opts = $.extend(true, {}, $.fn.morphdom.defaults, options);
 
@@ -27,7 +23,13 @@
             node = node[0];
         }
 
-        return $(morphdom(this[0], node, opts));
+        var results = $(morphdom(this[0], node, opts));
+
+        if (typeof(options) === 'function') {
+            options(results);
+        }
+
+        return results;
     };
 
 })(jQuery);
