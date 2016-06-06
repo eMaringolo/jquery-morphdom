@@ -40,6 +40,10 @@ jQuery(document).ready(function ($) {
 });
 ```
 
+### Usage With Require
+
+Please see this [requirebin project](http://requirebin.com/?gist=9e417680ef14abd2a3c379cd366a8eed).
+
 ### Use Cases
 
 * loading form data via AJAX
