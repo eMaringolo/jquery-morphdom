@@ -11,6 +11,6 @@
   "author": "James Doyle <james2doyle@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "morphdom": "^1.1.2"
+    "morphdom": "^2.1.0"
   }
 }
