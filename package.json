@@ -1,6 +1,6 @@
 {
   "name": "jquery-morphdom",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A thin jQuery wrapped around patrick-steele-idem/morphdom",
   "main": "index.js",
   "repository": "https://github.com/james2doyle/jquery-morphdom",
