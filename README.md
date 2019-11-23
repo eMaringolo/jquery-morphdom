@@ -1,6 +1,6 @@
 # jquery-morphdom
 
-A jQuery wrapper for [morphdom](https://github.com/patrick-steele-idem/morphdom/) - a fast and lightweight DOM diffing/patching (without the virtual part)
+A jQuery wrapper for [morphdom](https://github.com/patrick-steele-idem/morphdom/) 2.5 - a fast and lightweight DOM diffing/patching (without the virtual part)
 
 ### About Morphdom
 
@@ -23,7 +23,7 @@ $('#somediv').morphdom("<div id=\"newdiv\">I will replace #somediv</div>");
 
 ### Example
 
-See the [example.html](https://github.com/james2doyle/jquery-morphdom/blob/master/example.html) for the full use case.
+See the [example.html](https://github.com/emaringolo/jquery-morphdom/blob/master/example.html) for the full use case.
 
 ```js
 jQuery(document).ready(function ($) {
@@ -39,10 +39,6 @@ jQuery(document).ready(function ($) {
     });
 });
 ```
-
-### Usage With Require
-
-Please see this [requirebin project](http://requirebin.com/?gist=9e417680ef14abd2a3c379cd366a8eed).
 
 ### Use Cases
 
