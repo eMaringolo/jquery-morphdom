@@ -1,6 +1,6 @@
 {
   "name": "jquery-morphdom",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "A thin jQuery wrapped around patrick-steele-idem/morphdom",
   "main": "index.js",
   "repository": "https://github.com/james2doyle/jquery-morphdom",
@@ -9,8 +9,9 @@
     "build": "browserify index.js -o jquery.morphdom.js && uglifyjs jquery.morphdom.js -o jquery.morphdom.min.js -c"
   },
   "author": "James Doyle <james2doyle@gmail.com>",
+  "contributors": ["Esteban A. Maringolo <emaringolo@gmail.com>"],
   "license": "MIT",
   "dependencies": {
-    "morphdom": "^2.1.0"
+    "morphdom": "^2.5.0"
   }
 }
